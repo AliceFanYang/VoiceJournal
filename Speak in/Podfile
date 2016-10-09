@@ -11,7 +11,7 @@ target 'Speak in' do
     pod 'Charts'
     pod 'Charts/Realm'
     pod 'RealmSwift'
-
+    pod 'SwiftCharts', :git => 'https://github.com/i-schuetz/SwiftCharts.git'
 end
 
 post_install do |installer|

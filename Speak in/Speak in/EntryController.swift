@@ -14,6 +14,8 @@ import Foundation
 
 class EntryController: UIViewController, SFSpeechRecognizerDelegate {
     
+    
+    
     @IBOutlet weak var microphoneButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
