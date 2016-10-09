@@ -41,8 +41,7 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let modIndex = tableData!.count - 1 - indexPath.row;
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell") as! TableCell
-//        cell.title_label.text = tableData![modIndex].entryTitle // TODO (Alice/Gunnar): Load real title
-        cell.title_label.text = "TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle"
+        cell.title_label.text = tableData![modIndex].entryTitle
         cell.blurb_label.text = tableData![modIndex].entryText
         
         let dateFormatter = DateFormatter()
