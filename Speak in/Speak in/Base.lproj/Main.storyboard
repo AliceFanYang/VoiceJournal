@@ -398,7 +398,10 @@
                                 </userDefinedRuntimeAttributes>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQe-q1-5lS">
-                                <state key="normal" title="Confirm Reminder Time"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Confirm Reminder Time">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="aVv-Tp-vih" kind="unwind" unwindAction="unwindToEntryControllerWithSegue:" id="FYj-c9-wAH"/>
                                 </connections>
