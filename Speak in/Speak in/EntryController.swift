@@ -205,10 +205,13 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
             
             if result != nil {
                 
-                self.textView.text = self.textView.text + result!.bestTranscription.formattedString
+                self.textView.text = result?.bestTranscription.formattedString
                 isFinal = (result?.isFinal)!
+
             }
+
             
+
             if error != nil || isFinal {
                 self.audioEngine.stop()
                 inputNode.removeTap(onBus: 0)
