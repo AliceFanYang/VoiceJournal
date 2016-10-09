@@ -14,14 +14,14 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
     // Reference to table view
     @IBOutlet weak var table_view: UITableView!
     
+    let realm = try! Realm()
     var tableData: Results<JournalEntry>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let realm = try! Realm()
-        self.tableData = realm.objects(JournalEntry.self)
+        self.tableData = self.realm.objects(JournalEntry.self)
         self.table_view.delegate = self
         self.table_view.dataSource = self
 //        self.table_view.rowHeight = UITableViewAutomaticDimension
@@ -52,6 +52,15 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let modIndex = self.tableData!.count - 1 - indexPath.row;
+            try! self.realm.write {
+                self.realm.delete(self.tableData![modIndex]) // get object to delete and put object
+            }
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ShowDetailSegue") {
