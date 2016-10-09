@@ -112,6 +112,8 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
    
     @IBAction func deleteTapped(_ sender: UIButton) {
         deleteAlert()
+        startRecording()
+        saveButton.isEnabled = false
     }
     
     
