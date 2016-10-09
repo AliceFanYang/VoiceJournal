@@ -123,38 +123,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DIR-cG-SAe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DIR-cG-SAe">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" id="mSP-yi-oJW" customClass="TableCell" customModule="Speak_in" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mSP-yi-oJW" id="Guy-5B-Brm">
-                                            <frame key="frameInset" width="375" height="60"/>
+                                            <frame key="frameInset" width="375" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kss-eQ-jO7">
-                                                    <frame key="frameInset" minX="8" width="43" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kss-eQ-jO7">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blurb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGK-jg-shz">
-                                                    <frame key="frameInset" minX="8" minY="31" width="291" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blurb" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGK-jg-shz">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-u5-Z83">
-                                                    <frame key="frameInset" minX="282" minY="6" width="85" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-u5-Z83">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kss-eQ-jO7" firstAttribute="top" secondItem="Guy-5B-Brm" secondAttribute="top" constant="8" id="3yt-Ge-Vjn"/>
+                                                <constraint firstItem="yGK-jg-shz" firstAttribute="leading" secondItem="Guy-5B-Brm" secondAttribute="leading" constant="8" id="Dde-QQ-RQk"/>
+                                                <constraint firstItem="yGK-jg-shz" firstAttribute="top" secondItem="Kss-eQ-jO7" secondAttribute="bottom" constant="8" id="GgZ-YF-DgB"/>
+                                                <constraint firstAttribute="trailing" secondItem="xRp-u5-Z83" secondAttribute="trailing" constant="8" id="Oey-Gr-1sw"/>
+                                                <constraint firstItem="xRp-u5-Z83" firstAttribute="baseline" secondItem="Kss-eQ-jO7" secondAttribute="baseline" id="ZbL-GY-XdB"/>
+                                                <constraint firstItem="Kss-eQ-jO7" firstAttribute="top" secondItem="Guy-5B-Brm" secondAttribute="top" constant="8" id="bUZ-K9-BGv"/>
+                                                <constraint firstItem="Kss-eQ-jO7" firstAttribute="leading" secondItem="Guy-5B-Brm" secondAttribute="leading" constant="8" id="hG8-IQ-Ggc"/>
+                                                <constraint firstItem="xRp-u5-Z83" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kss-eQ-jO7" secondAttribute="trailing" constant="8" id="tHC-Qc-1J7"/>
+                                                <constraint firstItem="Kss-eQ-jO7" firstAttribute="leading" secondItem="Guy-5B-Brm" secondAttribute="leading" constant="8" id="y17-Lo-wqu"/>
+                                                <constraint firstAttribute="trailing" secondItem="yGK-jg-shz" secondAttribute="trailing" constant="8" id="zvo-HU-SMG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="blurb_label" destination="yGK-jg-shz" id="l1c-Hy-tCB"/>
