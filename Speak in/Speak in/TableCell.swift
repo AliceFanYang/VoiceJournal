@@ -9,13 +9,8 @@
 import UIKit
 
 class TableCell: UITableViewCell {
-
-   
-    @IBOutlet weak var play_button: UIButton!
     @IBOutlet weak var title_label: UILabel!
     @IBOutlet weak var date_label: UILabel!
     @IBOutlet weak var blurb_label: UILabel!
-    @IBOutlet weak var percentage_label: UILabel!
-    
-
+    @IBOutlet weak var dominantEmotion_label: UILabel!
 }

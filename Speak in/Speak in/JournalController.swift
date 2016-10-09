@@ -10,19 +10,10 @@ import UIKit
 
 class JournalController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    struct MyData {
-        var play_button:String//modify?
-        var title_label:String
-        var date_label:String
-        var blurb_label:String
-        var percentage_label:String
-        
-    }
-    
     // Reference to table view
     @IBOutlet weak var table_view: UITableView!
     
-    var tableData : [MyData] = []
+    var tableData : [JournalEntry] = [JournalEntry(id: "lol_id", entryTitle: "Tonight, my wife died", date: Date() as NSDate, entryText: "It was a dark and stormy night.  I got anxious.  So I killed her.", emotions: [0.0,0.75,0.0,0.0,0.0])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +21,9 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         self.table_view.delegate = self;
         self.table_view.dataSource = self;
-        
-        
-        tableData = [
-            MyData(play_button: "Something", title_label: "Entry 1", date_label:"10/06/16", blurb_label:"My day was fine.", percentage_label:"50%")]
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    override func didReceiveMemoryWarning() { super.didReceiveMemoryWarning() }
     
     @IBAction func unwindToEntryController(segue: UIStoryboardSegue) {}
     
@@ -52,15 +36,11 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath as IndexPath) as! TableCell
-        
-        
-        cell.play_button.setTitle(tableData[0].play_button, for: UIControlState.normal)
-        cell.title_label.text = tableData[0].title_label
-        cell.date_label.text = tableData[0].date_label
-        cell.blurb_label.text = tableData[0].blurb_label
-        cell.percentage_label.text = tableData[0].percentage_label
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell") as! TableCell
+        cell.title_label.text = tableData[0].entryTitle
+        cell.date_label.text = "ignore me"
+        cell.blurb_label.text = tableData[0].entryText
+        cell.dominantEmotion_label.text = tableData[0].dominantEmotion
         return cell
     }
     

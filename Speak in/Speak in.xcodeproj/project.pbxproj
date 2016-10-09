@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06A276BD1DA9C46A007A4D31 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A276BC1DA9C46A007A4D31 /* JournalEntry.swift */; };
 		234AE7C31DA9827F008A4185 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AE7C21DA9827F008A4185 /* OptionsController.swift */; };
 		234AE7C51DA99520008A4185 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AE7C41DA99520008A4185 /* TableCell.swift */; };
 		234AE7C71DA99890008A4185 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AE7C61DA99890008A4185 /* JournalController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06A276BC1DA9C46A007A4D31 /* JournalEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		234AE7C21DA9827F008A4185 /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
 		234AE7C41DA99520008A4185 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		234AE7C61DA99890008A4185 /* JournalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
@@ -41,9 +43,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06A276BA1DA9C3FF007A4D31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				23C7FD761DA9776C0019C17B /* Main.storyboard */,
+				23C7FD7B1DA9776C0019C17B /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		06A276BB1DA9C437007A4D31 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				06A276BC1DA9C46A007A4D31 /* JournalEntry.swift */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
 		234AE7C11DA981FE008A4185 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				234AE7C41DA99520008A4185 /* TableCell.swift */,
 				23C7FD741DA9776C0019C17B /* EntryController.swift */,
 				234AE7C61DA99890008A4185 /* JournalController.swift */,
 				234AE7C21DA9827F008A4185 /* OptionsController.swift */,
@@ -70,12 +90,11 @@
 		23C7FD711DA9776C0019C17B /* Speak in */ = {
 			isa = PBXGroup;
 			children = (
+				06A276BB1DA9C437007A4D31 /* Data Models */,
+				06A276BA1DA9C3FF007A4D31 /* Storyboards */,
 				234AE7C11DA981FE008A4185 /* Controllers */,
 				23C7FD721DA9776C0019C17B /* AppDelegate.swift */,
-				23C7FD761DA9776C0019C17B /* Main.storyboard */,
-				234AE7C41DA99520008A4185 /* TableCell.swift */,
 				23C7FD791DA9776C0019C17B /* Assets.xcassets */,
-				23C7FD7B1DA9776C0019C17B /* LaunchScreen.storyboard */,
 				23C7FD7E1DA9776C0019C17B /* Info.plist */,
 			);
 			path = "Speak in";
@@ -153,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A276BD1DA9C46A007A4D31 /* JournalEntry.swift in Sources */,
 				23C7FD751DA9776C0019C17B /* EntryController.swift in Sources */,
 				234AE7C31DA9827F008A4185 /* OptionsController.swift in Sources */,
 				234AE7C51DA99520008A4185 /* TableCell.swift in Sources */,
