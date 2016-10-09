@@ -94,7 +94,7 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
         let alert = UIAlertController(title:"Entry name", message: nil, preferredStyle: .alert)
         alert.addTextField(configurationHandler: configurationTextField)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:handleCancel))
-        alert.addAction(UIAlertAction(title: "Done", style: .default, handler:{ (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler:{ (UIAlertAction) in
         }))
         
         present(alert, animated: true, completion:nil)
