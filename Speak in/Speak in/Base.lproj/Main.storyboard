@@ -245,7 +245,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="Fcy-Th-Qfd">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="njS-JW-kpO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="IvP-Li-B7o"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Happiness Over Time" id="yUG-NT-lrd">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Home" id="xDa-RU-Dy9">
@@ -267,7 +274,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.034101858481854215" green="0.13567358454916512" blue="0.36991185897435896" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvF-Ko-1Qw">
                                 <frame key="frameInset" minX="16" minY="392" width="345" height="21"/>
@@ -448,6 +454,7 @@
         <image name="Microphone" width="64" height="64"/>
         <image name="Settings" width="32" height="32"/>
         <image name="background" width="600" height="318"/>
+        <image name="blue" width="960" height="540"/>
         <image name="light_back" width="600" height="318"/>
         <image name="light_blue" width="960" height="540"/>
     </resources>
