@@ -16,6 +16,7 @@
 		23C7FD781DA9776C0019C17B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C7FD761DA9776C0019C17B /* Main.storyboard */; };
 		23C7FD7A1DA9776C0019C17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C7FD791DA9776C0019C17B /* Assets.xcassets */; };
 		23C7FD7D1DA9776C0019C17B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C7FD7B1DA9776C0019C17B /* LaunchScreen.storyboard */; };
+		68E1698DD3D94CAA8A42DD1F /* Pods_Speak_in.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A192F0EEC69A38C30474F36D /* Pods_Speak_in.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		23C7FD791DA9776C0019C17B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23C7FD7C1DA9776C0019C17B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23C7FD7E1DA9776C0019C17B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33D9CB7ED20031032E563C37 /* Pods-Speak in.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speak in.release.xcconfig"; path = "Pods/Target Support Files/Pods-Speak in/Pods-Speak in.release.xcconfig"; sourceTree = "<group>"; };
+		986A05B2C2A564C66E0A74DB /* Pods-Speak in.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speak in.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Speak in/Pods-Speak in.debug.xcconfig"; sourceTree = "<group>"; };
+		A192F0EEC69A38C30474F36D /* Pods_Speak_in.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Speak_in.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E1698DD3D94CAA8A42DD1F /* Pods_Speak_in.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,8 @@
 			children = (
 				23C7FD711DA9776C0019C17B /* Speak in */,
 				23C7FD701DA9776C0019C17B /* Products */,
+				B912DA6BDCC4414ABD8A1882 /* Pods */,
+				BD49CBF9825F4737EFF81D5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +107,23 @@
 			path = "Speak in";
 			sourceTree = "<group>";
 		};
+		B912DA6BDCC4414ABD8A1882 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				986A05B2C2A564C66E0A74DB /* Pods-Speak in.debug.xcconfig */,
+				33D9CB7ED20031032E563C37 /* Pods-Speak in.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BD49CBF9825F4737EFF81D5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A192F0EEC69A38C30474F36D /* Pods_Speak_in.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23C7FD811DA9776C0019C17B /* Build configuration list for PBXNativeTarget "Speak in" */;
 			buildPhases = (
+				169B7FA8D5D837052CAAA762 /* [CP] Check Pods Manifest.lock */,
 				23C7FD6B1DA9776C0019C17B /* Sources */,
 				23C7FD6C1DA9776C0019C17B /* Frameworks */,
 				23C7FD6D1DA9776C0019C17B /* Resources */,
+				E8867446B4F28718561AD042 /* [CP] Embed Pods Frameworks */,
+				8EB628B6FF2018323D80A8C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,7 @@
 				TargetAttributes = {
 					23C7FD6E1DA9776C0019C17B = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BSU3AJ4GZL;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -166,6 +194,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		169B7FA8D5D837052CAAA762 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8EB628B6FF2018323D80A8C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speak in/Pods-Speak in-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8867446B4F28718561AD042 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Speak in/Pods-Speak in-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23C7FD6B1DA9776C0019C17B /* Sources */ = {
@@ -298,8 +374,10 @@
 		};
 		23C7FD821DA9776C0019C17B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 986A05B2C2A564C66E0A74DB /* Pods-Speak in.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BSU3AJ4GZL;
 				INFOPLIST_FILE = "Speak in/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "irene.Speak-in";
@@ -310,8 +388,10 @@
 		};
 		23C7FD831DA9776C0019C17B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33D9CB7ED20031032E563C37 /* Pods-Speak in.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BSU3AJ4GZL;
 				INFOPLIST_FILE = "Speak in/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "irene.Speak-in";
