@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PBl-eb-9fs"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="L9V-Tu-5O8"/>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uXV-Ob-av8">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wI1-kA-H6w">
@@ -79,18 +79,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PBl-eb-9fs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="19U-gK-yT5"/>
+                            <constraint firstItem="L9V-Tu-5O8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6sC-UB-cwb"/>
                             <constraint firstAttribute="trailing" secondItem="uXV-Ob-av8" secondAttribute="trailing" constant="20" id="CSd-YY-tmN"/>
-                            <constraint firstItem="PBl-eb-9fs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DhM-0E-q5X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L9V-Tu-5O8" secondAttribute="bottom" id="Fpm-U0-QB3"/>
                             <constraint firstItem="uXV-Ob-av8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="GLP-nB-e28"/>
-                            <constraint firstItem="PBl-eb-9fs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HOc-0A-FDu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e59-8s-hZF" secondAttribute="trailing" constant="48" id="JkR-5N-IJF"/>
                             <constraint firstItem="uXV-Ob-av8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="LAi-Xl-sn3"/>
-                            <constraint firstItem="PBl-eb-9fs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mpi-2P-l0C"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PBl-eb-9fs" secondAttribute="bottom" id="NPj-ve-JpG"/>
                             <constraint firstItem="e59-8s-hZF" firstAttribute="top" secondItem="uXV-Ob-av8" secondAttribute="bottom" constant="38" id="NSx-fC-gre"/>
+                            <constraint firstItem="L9V-Tu-5O8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qco-YZ-W8y"/>
                             <constraint firstItem="WeG-oA-DvC" firstAttribute="top" secondItem="e59-8s-hZF" secondAttribute="bottom" constant="58" id="Rgu-Fz-I0I"/>
-                            <constraint firstAttribute="trailing" secondItem="PBl-eb-9fs" secondAttribute="trailing" id="S2W-Y9-Ykc"/>
+                            <constraint firstAttribute="trailing" secondItem="L9V-Tu-5O8" secondAttribute="trailing" id="Rul-wo-lzh"/>
                             <constraint firstItem="snx-9X-8lf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Teg-6L-nqv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="snx-9X-8lf" secondAttribute="bottom" constant="40" id="YVO-WX-n4F"/>
                             <constraint firstItem="WeG-oA-DvC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="b5e-UG-vn4"/>
@@ -98,7 +96,6 @@
                             <constraint firstItem="snx-9X-8lf" firstAttribute="top" secondItem="WeG-oA-DvC" secondAttribute="bottom" constant="60.5" id="hGd-xF-L8a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WeG-oA-DvC" secondAttribute="trailing" constant="50" id="lLa-RB-mYP"/>
                             <constraint firstItem="uXV-Ob-av8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQa-LU-uzz"/>
-                            <constraint firstAttribute="trailing" secondItem="PBl-eb-9fs" secondAttribute="trailing" id="nzn-O0-dow"/>
                             <constraint firstAttribute="trailingMargin" secondItem="snx-9X-8lf" secondAttribute="trailing" constant="50" id="vew-Qr-YBj"/>
                         </constraints>
                     </view>
@@ -130,10 +127,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" id="mSP-yi-oJW" customClass="TableCell" customModule="Speak_in" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mSP-yi-oJW" id="Guy-5B-Brm">
-                                            <frame key="frameInset" width="375" height="59"/>
+                                            <frame key="frameInset" width="1000" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoy-sj-fCB">
@@ -342,6 +339,6 @@
     </scenes>
     <resources>
         <image name="Microphone" width="64" height="64"/>
-        <image name="background.jpg" width="1200" height="637"/>
+        <image name="background" width="600" height="318"/>
     </resources>
 </document>
