@@ -16,5 +16,6 @@ class TableCell: UITableViewCell {
     @IBOutlet weak var date_label: UILabel!
     @IBOutlet weak var blurb_label: UILabel!
     @IBOutlet weak var percentage_label: UILabel!
+    
 
 }

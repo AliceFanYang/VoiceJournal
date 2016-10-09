@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -23,12 +23,21 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhQ-me-e1a">
                                         <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="deleteTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yca-7B-VEb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1m-tz-yAx">
                                         <state key="normal" title="Record"/>
+                                        <connections>
+                                            <action selector="microphoneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jel-Dw-7we"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kn5-Zx-kBV">
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jZO-NN-wLv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -48,6 +57,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="snx-9X-8lf">
+                                <frame key="frameInset" minX="67" minY="122" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -60,6 +77,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="WeG-oA-DvC" secondAttribute="trailing" constant="50" id="zHV-VI-bda"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="rhQ-me-e1a" id="3zA-38-cmc"/>
+                        <outlet property="microphoneButton" destination="e1m-tz-yAx" id="cXR-Od-0Ju"/>
+                        <outlet property="saveButton" destination="kn5-Zx-kBV" id="1ys-Jv-6m8"/>
+                        <outlet property="textView" destination="snx-9X-8lf" id="3KT-Q2-mDH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
