@@ -6,7 +6,9 @@
 //  Copyright © 2016 Irene Woo. All rights reserved.
 //
 
+import Alamofire
 import UIKit
+import RealmSwift
 import Speech
 import Foundation
 
@@ -90,7 +92,40 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
     
     
     @IBAction func saveText(_ sender: AnyObject) {
-        //do data stuff
+        let parameters: Parameters = [
+            "api_key": "2b0641dfee143ececc9b067b88aa3182",
+            "data": self.textView.text
+        ]
+        
+        Alamofire.request("https://apiv2.indico.io/emotion", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                guard let JSON = response.result.value as? [String: AnyObject]  else { return }
+                guard let emotion = JSON["results"] as? [String: Float] else { return }
+
+                let entry = JournalEntry()
+                entry.entryText = self.textView.text
+                entry.anger = emotion["anger"]!
+                entry.joy = emotion["joy"]!
+                entry.fear = emotion["fear"]!
+                entry.sadness = emotion["sadness"]!
+                entry.surprise = emotion["surprise"]!
+                entry.entryTitle = "" // TODO(ATAL): Store Title
+                
+                entry.date = Date() as NSDate //current date
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "EEEE',' MMMM dd',' yyyy 'at' h:mm:ss a '('vvvv')'"
+                entry.id = dateFormatter.string(from: entry.date as Date!)
+
+                // Save Journal Entry.
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.add(entry)
+                    
+                }
+        }
+
+        
+        
     }
     
     
