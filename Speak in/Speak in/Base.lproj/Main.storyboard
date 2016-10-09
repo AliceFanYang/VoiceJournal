@@ -165,7 +165,7 @@
                                             <outlet property="blurb_label" destination="yGK-jg-shz" id="l1c-Hy-tCB"/>
                                             <outlet property="date_label" destination="xRp-u5-Z83" id="hfw-Su-Ox6"/>
                                             <outlet property="title_label" destination="Kss-eQ-jO7" id="EON-Oi-2Mj"/>
-                                            <segue destination="uhl-pc-a7o" kind="show" id="dPQ-9N-ynq"/>
+                                            <segue destination="uhl-pc-a7o" kind="show" identifier="ShowDetailSegue" id="dPQ-9N-ynq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -175,7 +175,7 @@
                                     <constraint firstAttribute="height" constant="55" id="Cxb-TA-TgD"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Your Journal" id="eK0-Ra-XDj">
+                                    <navigationItem title="Your Journal Log" id="eK0-Ra-XDj">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Home" id="DIG-e4-AfD">
                                             <connections>
                                                 <segue destination="R5J-XK-fdQ" kind="unwind" unwindAction="unwindToEntryControllerWithSegue:" id="vsO-n1-1vX"/>
@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="912.5937031484259"/>
         </scene>
-        <!--View Controller-->
+        <!--Single Entry Detail Controller-->
         <scene sceneID="LTn-j9-J3l">
             <objects>
-                <viewController id="uhl-pc-a7o" sceneMemberID="viewController">
+                <viewController id="uhl-pc-a7o" customClass="SingleEntryDetailController" customModule="Speak_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tO1-uG-tt4"/>
                         <viewControllerLayoutGuide type="bottom" id="Aza-8L-YDC"/>
@@ -255,6 +255,10 @@
                             <constraint firstItem="vkR-4F-s2y" firstAttribute="top" secondItem="nGD-nV-KNJ" secondAttribute="top" id="eSc-zE-Kao"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="Qdi-aj-JU8" id="bDg-Cj-dtk"/>
+                        <outlet property="entryText" destination="7qg-CR-xbd" id="93C-Xw-jRw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXG-eZ-rPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Svu-2I-aBn" userLabel="Exit" sceneMemberID="exit"/>

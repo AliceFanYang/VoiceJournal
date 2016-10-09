@@ -36,7 +36,6 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
     }
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +50,16 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.date_label.text = dateFormatter.string(from: tableData![modIndex].date as Date!)
         
         return cell
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowDetailSegue") {
+            let index = self.tableData!.count - 1 - self.table_view!.indexPathForSelectedRow!.row
+            let viewController = segue.destination as! SingleEntryDetailController
+            viewController.selectedJournalEntry = self.tableData![index]
+        }
     }
     
 }
