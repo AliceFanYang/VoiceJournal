@@ -15,7 +15,6 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var table_view: UITableView!
     
     var tableData: Results<JournalEntry>?
-        //[JournalEntry] = [JournalEntry(id: "lol_id", entryTitle: "Tonight, my wife died", date: Date() as NSDate, entryText: "It was a dark and stormy night.  I got anxious.  So I killed her.", emotions: [0.0,0.75,0.0,0.0,0.0])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +22,6 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         let realm = try! Realm()
         self.tableData = realm.objects(JournalEntry.self)
-        
         self.table_view.delegate = self;
         self.table_view.dataSource = self;
         
@@ -34,7 +32,7 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBAction func unwindToJournalController(segue: UIStoryboardSegue) {}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return self.tableData!.count;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
@@ -43,10 +41,10 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell") as! TableCell
-        cell.title_label.text = tableData![0].entryTitle
+        cell.title_label.text = tableData![indexPath.row].entryTitle
         cell.date_label.text = "ignore me"
 
-        cell.blurb_label.text = tableData![0].entryText
+        cell.blurb_label.text = tableData![indexPath.row].entryText
 
         return cell
     }
