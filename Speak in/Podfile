@@ -8,6 +8,8 @@ target 'Speak in' do
 
     # Pods for Speak in
     pod 'Alamofire', '~> 4.0'
+    pod 'Charts'
+    pod 'Charts/Realm'
     pod 'RealmSwift'
     pod 'SwiftCharts', :git => 'https://github.com/i-schuetz/SwiftCharts.git'
 end

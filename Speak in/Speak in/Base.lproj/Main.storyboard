@@ -31,9 +31,8 @@
                                             <segue destination="tXt-90-eDb" kind="show" id="Tac-wJ-XBg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-cU-IZy">
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Settings">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-cU-IZy">
+                                        <state key="normal" image="Settings">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -146,6 +145,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light_blue" translatesAutoresizingMaskIntoConstraints="NO" id="kym-NE-h3a"/>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DIR-cG-SAe">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -213,6 +213,10 @@
                             <constraint firstAttribute="trailing" secondItem="f7S-ui-Q5h" secondAttribute="trailing" id="0VW-7I-U1B"/>
                             <constraint firstItem="f7S-ui-Q5h" firstAttribute="top" secondItem="Ynn-6M-lPV" secondAttribute="top" id="1H3-P0-oa9"/>
                             <constraint firstItem="veG-E2-zrb" firstAttribute="top" secondItem="DIR-cG-SAe" secondAttribute="bottom" id="9rE-52-DDf"/>
+                            <constraint firstItem="kym-NE-h3a" firstAttribute="top" secondItem="Ynn-6M-lPV" secondAttribute="top" id="At5-7l-Myz"/>
+                            <constraint firstItem="kym-NE-h3a" firstAttribute="leading" secondItem="Ynn-6M-lPV" secondAttribute="leading" id="NA5-dS-fRK"/>
+                            <constraint firstAttribute="bottom" secondItem="kym-NE-h3a" secondAttribute="bottom" id="R7q-m2-xAQ"/>
+                            <constraint firstAttribute="trailing" secondItem="kym-NE-h3a" secondAttribute="trailing" id="XWV-pQ-vRg"/>
                             <constraint firstItem="f7S-ui-Q5h" firstAttribute="leading" secondItem="Ynn-6M-lPV" secondAttribute="leading" id="hiC-dJ-I8p"/>
                             <constraint firstItem="DIR-cG-SAe" firstAttribute="leading" secondItem="Ynn-6M-lPV" secondAttribute="leading" id="i36-VX-qSO"/>
                             <constraint firstItem="DIR-cG-SAe" firstAttribute="top" secondItem="f7S-ui-Q5h" secondAttribute="bottom" constant="10" id="xxM-Uh-sD3"/>
@@ -294,6 +298,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light_blue" translatesAutoresizingMaskIntoConstraints="NO" id="D5w-Jo-n3l"/>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkR-4F-s2y">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="D7x-Mb-nLH"/>
@@ -309,8 +314,7 @@
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qg-CR-xbd">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5m-WA-Zqp">
@@ -321,7 +325,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdi-aj-JU8">
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -331,10 +335,14 @@
                             <constraint firstItem="Qdi-aj-JU8" firstAttribute="centerX" secondItem="nGD-nV-KNJ" secondAttribute="centerX" id="GMW-OO-Nvi"/>
                             <constraint firstItem="Qdi-aj-JU8" firstAttribute="top" secondItem="C5m-WA-Zqp" secondAttribute="bottom" constant="4" id="INT-N7-5Kk"/>
                             <constraint firstItem="vkR-4F-s2y" firstAttribute="leading" secondItem="nGD-nV-KNJ" secondAttribute="leading" id="M4b-ga-8mh"/>
+                            <constraint firstItem="D5w-Jo-n3l" firstAttribute="leading" secondItem="nGD-nV-KNJ" secondAttribute="leading" id="PrS-bi-9df"/>
+                            <constraint firstItem="D5w-Jo-n3l" firstAttribute="top" secondItem="nGD-nV-KNJ" secondAttribute="top" id="Y1r-rD-VTI"/>
+                            <constraint firstAttribute="bottom" secondItem="D5w-Jo-n3l" secondAttribute="bottom" id="e3M-X6-qcG"/>
                             <constraint firstAttribute="trailing" secondItem="vkR-4F-s2y" secondAttribute="trailing" id="eHi-iM-mI6"/>
                             <constraint firstItem="vkR-4F-s2y" firstAttribute="top" secondItem="nGD-nV-KNJ" secondAttribute="top" id="eSc-zE-Kao"/>
                             <constraint firstItem="7qg-CR-xbd" firstAttribute="leading" secondItem="nGD-nV-KNJ" secondAttribute="leading" constant="16" id="fK1-2c-4kp"/>
                             <constraint firstItem="7qg-CR-xbd" firstAttribute="top" secondItem="Qdi-aj-JU8" secondAttribute="bottom" constant="8" id="i03-gH-zr1"/>
+                            <constraint firstAttribute="trailing" secondItem="D5w-Jo-n3l" secondAttribute="trailing" id="lrW-1W-tpA"/>
                             <constraint firstAttribute="trailing" secondItem="7qg-CR-xbd" secondAttribute="trailing" constant="16" id="mev-DK-0Sg"/>
                             <constraint firstItem="C5m-WA-Zqp" firstAttribute="top" secondItem="vkR-4F-s2y" secondAttribute="bottom" constant="16" id="wOd-Uq-uJH"/>
                         </constraints>
@@ -349,7 +357,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXG-eZ-rPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Svu-2I-aBn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="137" y="1673"/>
+            <point key="canvasLocation" x="136.80000000000001" y="1672.7136431784108"/>
         </scene>
         <!--Options Controller-->
         <scene sceneID="si8-oX-21C">
@@ -394,7 +402,10 @@
                                 </userDefinedRuntimeAttributes>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQe-q1-5lS">
-                                <state key="normal" title="Confirm Reminder Time"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Confirm Reminder Time">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="aVv-Tp-vih" kind="unwind" unwindAction="unwindToEntryControllerWithSegue:" id="FYj-c9-wAH"/>
                                 </connections>
@@ -425,7 +436,9 @@
     </scenes>
     <resources>
         <image name="Microphone" width="64" height="64"/>
+        <image name="Settings" width="32" height="32"/>
         <image name="background" width="600" height="318"/>
         <image name="light_back" width="600" height="318"/>
+        <image name="light_blue" width="960" height="540"/>
     </resources>
 </document>

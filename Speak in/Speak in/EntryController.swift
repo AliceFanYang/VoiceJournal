@@ -75,52 +75,48 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
     
     
     @IBAction func microphoneTapped(_ sender: UIButton) {
+        print("\n\nMicrophone tapped\n\n")
         if audioEngine.isRunning { //stop speech recognition
-            audioEngine.stop()
+            audioEngine.pause()
             recognitionRequest?.endAudio()
             microphoneButton.setImage(UIImage(named: "Microphone"), for: UIControlState.normal)
             
             microphoneButton.isEnabled = false
-            saveButton.isEnabled = true
         } else { //start speech recognition
             startRecording()
             microphoneButton.setImage(UIImage(named: "Muted microphone"), for: UIControlState.normal)
-            saveButton.isEnabled = false
         }
-    }
-    
-    
-    func nameAlert()->String {
-        let alert = UIAlertController(title:"Entry name", message: nil, preferredStyle: .alert)
-        alert.addTextField(configurationHandler: configurationTextField)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:handleCancel))
-        alert.addAction(UIAlertAction(title: "Save", style: .default, handler:{ (UIAlertAction) in
-        }))
-        
-        present(alert, animated: true, completion:nil)
-        
-        return textView.text
-    }
-    
-    func deleteAlert() {
-        let alert = UIAlertController(title:"Are you sure?", message: "clicking yes will clear the text area.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler:handleCancel))
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler:{ (UIAlertAction) in
-            self.textView.text = "Say something, I'm listening!"
-        }))
-        
-        present(alert, animated: true, completion:nil)
     }
 
    
     @IBAction func deleteTapped(_ sender: UIButton) {
-        deleteAlert()
-        startRecording()
-        saveButton.isEnabled = false
+        audioEngine.pause()
+        microphoneButton.setImage(UIImage(named: "Microphone"), for: UIControlState.normal)
+
+        let alert = UIAlertController(title:"Are you sure?", message: "clicking yes will clear the text area.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler:handleCancel))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler:{ (UIAlertAction) in
+            self.textView.text = ""
+        }))
+        
+        present(alert, animated: true, completion:nil)
     }
     
     
     @IBAction func saveText(_ sender: AnyObject) {
+        audioEngine.pause()
+        microphoneButton.setImage(UIImage(named: "Microphone"), for: UIControlState.normal)
+
+        
+        let alert = UIAlertController(title:"Entry name", message: nil, preferredStyle: .alert)
+        alert.addTextField(configurationHandler: configurationTextField)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:handleCancel))
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler:confirmSave))
+        
+        present(alert, animated: true, completion:nil)
+    }
+    
+    func confirmSave(alertView: UIAlertAction!) {
         let parameters: Parameters = [
             "api_key": "2b0641dfee143ececc9b067b88aa3182",
             "data": self.textView.text
@@ -130,7 +126,7 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
             .responseJSON { response in
                 guard let JSON = response.result.value as? [String: AnyObject]  else { return }
                 guard let emotion = JSON["results"] as? [String: Float] else { return }
-
+                
                 let entry = JournalEntry()
                 entry.entryText = self.textView.text
                 entry.anger = emotion["anger"]!
@@ -138,13 +134,13 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
                 entry.fear = emotion["fear"]!
                 entry.sadness = emotion["sadness"]!
                 entry.surprise = emotion["surprise"]!
-                entry.entryTitle = self.nameAlert()
+                entry.entryTitle = self.journalTitle.text!
                 
                 entry.date = Date() as NSDate //current date
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "EEEE',' MMMM dd',' yyyy 'at' h:mm:ss a '('vvvv')'"
                 entry.id = dateFormatter.string(from: entry.date as Date!)
-
+                
                 // Save Journal Entry.
                 let realm = try! Realm()
                 try! realm.write {
@@ -154,13 +150,13 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
         }
     }
     
-    var tField: UITextField!
+    var journalTitle: UITextField!
     
     func configurationTextField(textField: UITextField!)
     {
         print("generating the TextField")
         textField.placeholder = "Enter an item"
-        tField = textField
+        self.journalTitle = textField
     }
     
     func handleCancel(alertView: UIAlertAction!)
@@ -209,7 +205,7 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
             
             if result != nil {
                 
-                self.textView.text = result?.bestTranscription.formattedString
+                self.textView.text = self.textView.text + result!.bestTranscription.formattedString
                 isFinal = (result?.isFinal)!
             }
             
@@ -237,8 +233,9 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
             print("audioEngine couldn't start because of an error.")
         }
         
-        textView.text = "Say something, I'm listening!"
-        
+        if(textView.text == "") {
+            textView.text = "Say something, I'm listening!"
+        }
     }
 }
 
