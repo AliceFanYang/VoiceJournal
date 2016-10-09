@@ -13,10 +13,12 @@ import SwiftCharts
 class GraphController: UIViewController {
     
     @IBOutlet weak var chartView: UIView!
+    @IBOutlet weak var yLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.yLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
         let realm = try! Realm()
         let data = realm.objects(JournalEntry.self)
         var joyValues = [(Double, Double)?]()
@@ -37,7 +39,7 @@ class GraphController: UIViewController {
         )
         
         let chart = LineChart(
-            frame: CGRect(origin: CGPoint(x: 0,y :100), size: CGSize(width: 300, height: 300)),
+            frame: CGRect(origin: CGPoint(x: 20,y :70), size: CGSize(width: 300, height: 300)),
             chartConfig: chartConfig,
             xTitle: "Time",
             yTitle: "Emotion Intensity",
