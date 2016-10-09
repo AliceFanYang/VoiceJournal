@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		068A4B2B1DAA08710096C127 /* SingleEntryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068A4B2A1DAA08710096C127 /* SingleEntryDetail.swift */; };
 		06A276BD1DA9C46A007A4D31 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A276BC1DA9C46A007A4D31 /* JournalEntry.swift */; };
+		06BB392E1DAA42EE0031EE05 /* GraphController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BB392D1DAA42EE0031EE05 /* GraphController.swift */; };
 		234AE7C31DA9827F008A4185 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AE7C21DA9827F008A4185 /* OptionsController.swift */; };
 		234AE7C51DA99520008A4185 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AE7C41DA99520008A4185 /* TableCell.swift */; };
 		234AE7C71DA99890008A4185 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AE7C61DA99890008A4185 /* JournalController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		068A4B2A1DAA08710096C127 /* SingleEntryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleEntryDetail.swift; sourceTree = "<group>"; };
 		06A276BC1DA9C46A007A4D31 /* JournalEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		06BB392D1DAA42EE0031EE05 /* GraphController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphController.swift; sourceTree = "<group>"; };
 		234AE7C21DA9827F008A4185 /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
 		234AE7C41DA99520008A4185 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		234AE7C61DA99890008A4185 /* JournalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				23C7FD741DA9776C0019C17B /* EntryController.swift */,
 				234AE7C61DA99890008A4185 /* JournalController.swift */,
 				234AE7C21DA9827F008A4185 /* OptionsController.swift */,
+				06BB392D1DAA42EE0031EE05 /* GraphController.swift */,
 				068A4B2A1DAA08710096C127 /* SingleEntryDetail.swift */,
 			);
 			name = Controllers;
@@ -257,6 +260,7 @@
 				234AE7C31DA9827F008A4185 /* OptionsController.swift in Sources */,
 				234AE7C51DA99520008A4185 /* TableCell.swift in Sources */,
 				234AE7C71DA99890008A4185 /* JournalController.swift in Sources */,
+				06BB392E1DAA42EE0031EE05 /* GraphController.swift in Sources */,
 				23C7FD731DA9776C0019C17B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
