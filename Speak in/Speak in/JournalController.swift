@@ -40,11 +40,12 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let modIndex = tableData!.count - 1 - indexPath.row;
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell") as! TableCell
-        cell.title_label.text = tableData![indexPath.row].entryTitle
+        cell.title_label.text = tableData![modIndex].entryTitle
         cell.date_label.text = "ignore me"
 
-        cell.blurb_label.text = tableData![indexPath.row].entryText
+        cell.blurb_label.text = tableData![modIndex].entryText
 
         return cell
     }
