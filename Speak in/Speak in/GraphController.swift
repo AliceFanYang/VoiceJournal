@@ -33,7 +33,7 @@ class GraphController: UIViewController {
 
         let chartConfig = ChartConfigXY(
             xAxisConfig: ChartAxisConfig(from: 1, to: Double(joyValues.count), by: 1),
-            yAxisConfig: ChartAxisConfig(from: 0, to: Double(maxJoy+0.1), by: 0.1)
+            yAxisConfig: ChartAxisConfig(from: 0, to: Double(maxJoy+0.1), by: 0.05)
         )
         
         let chart = LineChart(
