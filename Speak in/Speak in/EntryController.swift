@@ -76,12 +76,12 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
         if audioEngine.isRunning { //stop speech recognition
             audioEngine.stop()
             recognitionRequest?.endAudio()
-            microphoneButton.setTitle("Start Recording", for: .normal)
+//            microphoneButton.setTitle("Start Recording", for: .normal)
             microphoneButton.isEnabled = false
             saveButton.isEnabled = true
         } else { //start speech recognition
             startRecording()
-            microphoneButton.setTitle("Stop Recording", for: .normal)
+//            microphoneButton.setTitle("Stop Recording", for: .normal)
             saveButton.isEnabled = false
         }
     }
