@@ -86,8 +86,32 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
         }
     }
     
+    
+    func nameAlert()->String {
+        let alert = UIAlertController(title:"Entry name", message: nil, preferredStyle: .alert)
+        alert.addTextField(configurationHandler: configurationTextField)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:handleCancel))
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler:{ (UIAlertAction) in
+        }))
+        
+        present(alert, animated: true, completion:nil)
+        
+        return textView.text
+    }
+    
+    func deleteAlert() {
+        let alert = UIAlertController(title:"Are you sure?", message: "clicking yes will clear the text area.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler:handleCancel))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler:{ (UIAlertAction) in
+            self.textView.text = "Say something, I'm listening!"
+        }))
+        
+        present(alert, animated: true, completion:nil)
+    }
+
    
     @IBAction func deleteTapped(_ sender: UIButton) {
+        deleteAlert()
     }
     
     
@@ -109,7 +133,7 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
                 entry.fear = emotion["fear"]!
                 entry.sadness = emotion["sadness"]!
                 entry.surprise = emotion["surprise"]!
-                entry.entryTitle = "" // TODO(ATAL): Store Title
+                entry.entryTitle = self.nameAlert()
                 
                 entry.date = Date() as NSDate //current date
                 let dateFormatter = DateFormatter()
@@ -123,13 +147,24 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
                     
                 }
         }
-
-        
-        
     }
     
+    var tField: UITextField!
     
+    func configurationTextField(textField: UITextField!)
+    {
+        print("generating the TextField")
+        textField.placeholder = "Enter an item"
+        tField = textField
+    }
     
+    func handleCancel(alertView: UIAlertAction!)
+    {
+        print("Cancelled !!")
+    }
+    
+    var alert = UIAlertController(title: "Journal Name", message: "", preferredStyle: .alert)
+
     
     //Listens are parses
     func startRecording() {
