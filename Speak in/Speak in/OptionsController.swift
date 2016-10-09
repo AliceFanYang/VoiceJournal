@@ -13,6 +13,11 @@ class OptionsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        /*self.datePicker.setValue(UIColor.whiteColor(), forKeyPath: "textColor")
+        self.datePicker.datePickerMode = .Date
+        self.datePicker.datePickerMode = .DateAndTime //Set here that mode you want.
+        self.datePicker.addTarget(self, action: Selector("selectedDate"), forControlEvents: .ValueChanged)*/
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -20,6 +25,6 @@ class OptionsController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+   
 }
 
