@@ -58,6 +58,7 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
         if (segue.identifier == "ShowDetailSegue") {
             let index = self.tableData!.count - 1 - self.table_view!.indexPathForSelectedRow!.row
             let viewController = segue.destination as! SingleEntryDetailController
+            viewController.selectedJournalEntryNumber = "\(index + 1)"
             viewController.selectedJournalEntry = self.tableData![index]
         }
     }

@@ -217,17 +217,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdi-aj-JU8">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkR-4F-s2y">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="D7x-Mb-nLH"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="lpQ-uo-jEM">
+                                    <navigationItem title="Entry#" id="lpQ-uo-jEM">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Your Journal" id="cOV-NK-rhi">
                                             <connections>
                                                 <segue destination="Svu-2I-aBn" kind="unwind" unwindAction="unwindToJournalControllerWithSegue:" id="ch0-by-eSv"/>
@@ -241,23 +236,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5m-WA-Zqp">
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdi-aj-JU8">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7qg-CR-xbd" firstAttribute="top" secondItem="Qdi-aj-JU8" secondAttribute="bottom" constant="26" id="2nf-12-206"/>
-                            <constraint firstItem="Qdi-aj-JU8" firstAttribute="top" secondItem="vkR-4F-s2y" secondAttribute="bottom" constant="30" id="60X-oJ-KLZ"/>
-                            <constraint firstItem="Aza-8L-YDC" firstAttribute="top" secondItem="7qg-CR-xbd" secondAttribute="bottom" constant="40" id="94D-r5-ezm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7qg-CR-xbd" secondAttribute="trailing" constant="20" id="Jkd-ia-off"/>
-                            <constraint firstItem="Qdi-aj-JU8" firstAttribute="leading" secondItem="nGD-nV-KNJ" secondAttribute="leadingMargin" constant="20" id="LUw-pQ-NMl"/>
+                            <constraint firstItem="C5m-WA-Zqp" firstAttribute="centerX" secondItem="nGD-nV-KNJ" secondAttribute="centerX" id="0OH-r3-ftc"/>
+                            <constraint firstItem="Aza-8L-YDC" firstAttribute="top" secondItem="7qg-CR-xbd" secondAttribute="bottom" constant="16" id="Fb8-J1-o1g"/>
+                            <constraint firstItem="Qdi-aj-JU8" firstAttribute="centerX" secondItem="nGD-nV-KNJ" secondAttribute="centerX" id="GMW-OO-Nvi"/>
+                            <constraint firstItem="Qdi-aj-JU8" firstAttribute="top" secondItem="C5m-WA-Zqp" secondAttribute="bottom" constant="4" id="INT-N7-5Kk"/>
                             <constraint firstItem="vkR-4F-s2y" firstAttribute="leading" secondItem="nGD-nV-KNJ" secondAttribute="leading" id="M4b-ga-8mh"/>
-                            <constraint firstItem="7qg-CR-xbd" firstAttribute="leading" secondItem="nGD-nV-KNJ" secondAttribute="leadingMargin" constant="20" id="b8z-Eu-e9Z"/>
                             <constraint firstAttribute="trailing" secondItem="vkR-4F-s2y" secondAttribute="trailing" id="eHi-iM-mI6"/>
                             <constraint firstItem="vkR-4F-s2y" firstAttribute="top" secondItem="nGD-nV-KNJ" secondAttribute="top" id="eSc-zE-Kao"/>
+                            <constraint firstItem="7qg-CR-xbd" firstAttribute="leading" secondItem="nGD-nV-KNJ" secondAttribute="leading" constant="16" id="fK1-2c-4kp"/>
+                            <constraint firstItem="7qg-CR-xbd" firstAttribute="top" secondItem="Qdi-aj-JU8" secondAttribute="bottom" constant="8" id="i03-gH-zr1"/>
+                            <constraint firstAttribute="trailing" secondItem="7qg-CR-xbd" secondAttribute="trailing" constant="16" id="mev-DK-0Sg"/>
+                            <constraint firstItem="C5m-WA-Zqp" firstAttribute="top" secondItem="vkR-4F-s2y" secondAttribute="bottom" constant="16" id="wOd-Uq-uJH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="Qdi-aj-JU8" id="bDg-Cj-dtk"/>
+                        <outlet property="entryHeaderLabel" destination="lpQ-uo-jEM" id="jKf-cY-OFA"/>
                         <outlet property="entryText" destination="7qg-CR-xbd" id="93C-Xw-jRw"/>
+                        <outlet property="titleLabel" destination="C5m-WA-Zqp" id="jVa-ue-dpc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXG-eZ-rPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
