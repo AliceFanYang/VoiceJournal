@@ -205,7 +205,7 @@ class EntryController: UIViewController, SFSpeechRecognizerDelegate {
             
             if result != nil {
                 
-                self.textView.text = result?.bestTranscription.formattedString
+                self.textView.text = self.textView.text + result!.bestTranscription.formattedString
                 isFinal = (result?.isFinal)!
             }
             
