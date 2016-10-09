@@ -162,7 +162,7 @@
 				TargetAttributes = {
 					23C7FD6E1DA9776C0019C17B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 36Y8GV72Q9;
+						DevelopmentTeam = BSU3AJ4GZL;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -381,7 +381,7 @@
 			baseConfigurationReference = 986A05B2C2A564C66E0A74DB /* Pods-Speak in.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 36Y8GV72Q9;
+				DEVELOPMENT_TEAM = BSU3AJ4GZL;
 				INFOPLIST_FILE = "Speak in/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "irene.Speak-in";
@@ -395,7 +395,7 @@
 			baseConfigurationReference = 33D9CB7ED20031032E563C37 /* Pods-Speak in.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 36Y8GV72Q9;
+				DEVELOPMENT_TEAM = BSU3AJ4GZL;
 				INFOPLIST_FILE = "Speak in/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "irene.Speak-in";
