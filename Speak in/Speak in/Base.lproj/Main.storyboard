@@ -31,9 +31,8 @@
                                             <segue destination="tXt-90-eDb" kind="show" id="Tac-wJ-XBg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-cU-IZy">
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Settings">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-cU-IZy">
+                                        <state key="normal" image="Settings">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -432,6 +431,7 @@
     </scenes>
     <resources>
         <image name="Microphone" width="64" height="64"/>
+        <image name="Settings" width="32" height="32"/>
         <image name="background" width="600" height="318"/>
         <image name="light_back" width="600" height="318"/>
         <image name="light_blue" width="960" height="540"/>
