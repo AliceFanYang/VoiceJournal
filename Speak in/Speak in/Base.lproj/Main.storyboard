@@ -232,7 +232,7 @@
         <!--Stats-->
         <scene sceneID="XIJ-h6-wjK">
             <objects>
-                <viewController id="45y-Jf-SoV" sceneMemberID="viewController">
+                <viewController id="45y-Jf-SoV" customClass="GraphController" customModule="Speak_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y7z-79-Kil"/>
                         <viewControllerLayoutGuide type="bottom" id="a6A-L2-jGW"/>
@@ -241,17 +241,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pretty Graph Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9j-s9-szg">
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="njS-JW-kpO">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="jZK-jO-jyR"/>
-                                </constraints>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="njS-JW-kpO">
                                 <items>
-                                    <navigationItem title="Stats" id="yUG-NT-lrd">
+                                    <navigationItem title="Happiness Over Time" id="yUG-NT-lrd">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Home" id="xDa-RU-Dy9">
                                             <connections>
                                                 <segue destination="UbB-tO-R06" kind="unwind" unwindAction="unwindToEntryControllerWithSegue:" id="BBt-xX-4iT"/>
@@ -260,22 +252,35 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPy-20-Qng">
+                                <frame key="frameInset" minX="24" minY="83" width="343" height="400"/>
+                                <color key="backgroundColor" red="0.034101858481854215" green="0.13567358454916512" blue="0.36991185897435896" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvF-Ko-1Qw">
+                                <frame key="frameInset" minX="16" minY="450" width="345" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.035294117647058823" green="0.13725490196078433" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="EPy-20-Qng" firstAttribute="top" secondItem="njS-JW-kpO" secondAttribute="bottom" constant="8" id="7eD-DA-OjI"/>
                             <constraint firstItem="njS-JW-kpO" firstAttribute="top" secondItem="y7z-79-Kil" secondAttribute="bottom" id="9NZ-Ch-88x"/>
                             <constraint firstAttribute="trailing" secondItem="njS-JW-kpO" secondAttribute="trailing" id="Mjm-W5-67E"/>
-                            <constraint firstItem="t9j-s9-szg" firstAttribute="centerY" secondItem="z0k-zf-Mac" secondAttribute="centerY" id="Nrq-xa-zCQ"/>
-                            <constraint firstItem="t9j-s9-szg" firstAttribute="centerX" secondItem="z0k-zf-Mac" secondAttribute="centerX" id="QCv-WO-X28"/>
                             <constraint firstItem="njS-JW-kpO" firstAttribute="leading" secondItem="z0k-zf-Mac" secondAttribute="leading" id="U9w-0r-Sd6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stats" id="OVt-M8-xeJ" userLabel="Stats"/>
+                    <connections>
+                        <outlet property="chartView" destination="EPy-20-Qng" id="j3y-ta-bux"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="800-hM-Fyh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UbB-tO-R06" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-650" y="1673"/>
+            <point key="canvasLocation" x="-650.39999999999998" y="1672.7136431784108"/>
         </scene>
         <!--Single Entry Detail Controller-->
         <scene sceneID="LTn-j9-J3l">
