@@ -25,10 +25,10 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     override func didReceiveMemoryWarning() { super.didReceiveMemoryWarning() }
     
-    @IBAction func unwindToEntryController(segue: UIStoryboardSegue) {}
+    @IBAction func unwindToJournalController(segue: UIStoryboardSegue) {}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 20
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
@@ -40,7 +40,7 @@ class JournalController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.title_label.text = tableData[0].entryTitle
         cell.date_label.text = "ignore me"
         cell.blurb_label.text = tableData[0].entryText
-        cell.dominantEmotion_label.text = tableData[0].dominantEmotion
+        //cell.dominantEmotion_label.text = tableData[0].dominantEmotion
         return cell
     }
     

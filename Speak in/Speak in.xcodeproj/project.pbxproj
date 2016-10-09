@@ -11,6 +11,7 @@
 		234AE7C31DA9827F008A4185 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AE7C21DA9827F008A4185 /* OptionsController.swift */; };
 		234AE7C51DA99520008A4185 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AE7C41DA99520008A4185 /* TableCell.swift */; };
 		234AE7C71DA99890008A4185 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AE7C61DA99890008A4185 /* JournalController.swift */; };
+		23C3FE041DA9D2AC009691D0 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23C3FE031DA9D2AC009691D0 /* background.jpg */; };
 		23C7FD731DA9776C0019C17B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7FD721DA9776C0019C17B /* AppDelegate.swift */; };
 		23C7FD751DA9776C0019C17B /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7FD741DA9776C0019C17B /* EntryController.swift */; };
 		23C7FD781DA9776C0019C17B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C7FD761DA9776C0019C17B /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		234AE7C21DA9827F008A4185 /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
 		234AE7C41DA99520008A4185 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		234AE7C61DA99890008A4185 /* JournalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
+		23C3FE031DA9D2AC009691D0 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../background.jpg; sourceTree = "<group>"; };
 		23C7FD6F1DA9776C0019C17B /* Speak in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speak in.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C7FD721DA9776C0019C17B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23C7FD741DA9776C0019C17B /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		23C7FD711DA9776C0019C17B /* Speak in */ = {
 			isa = PBXGroup;
 			children = (
+				23C3FE031DA9D2AC009691D0 /* background.jpg */,
 				06A276BB1DA9C437007A4D31 /* Data Models */,
 				06A276BA1DA9C3FF007A4D31 /* Storyboards */,
 				234AE7C11DA981FE008A4185 /* Controllers */,
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23C7FD7D1DA9776C0019C17B /* LaunchScreen.storyboard in Resources */,
+				23C3FE041DA9D2AC009691D0 /* background.jpg in Resources */,
 				23C7FD7A1DA9776C0019C17B /* Assets.xcassets in Resources */,
 				23C7FD781DA9776C0019C17B /* Main.storyboard in Resources */,
 			);
