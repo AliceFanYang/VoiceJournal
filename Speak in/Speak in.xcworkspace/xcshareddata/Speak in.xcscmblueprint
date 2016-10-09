@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F6BCB51616B6A2C5090628B4B2B70EF5A9E71363",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F6BCB51616B6A2C5090628B4B2B70EF5A9E71363" : 9223372036854775807,
+    "978052649186A4E59AC3E64481FDC004F942CDBD" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "ED8757B3-4C68-4C3E-A850-24B9E70B335B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F6BCB51616B6A2C5090628B4B2B70EF5A9E71363" : "VoiceJournal\/",
+    "978052649186A4E59AC3E64481FDC004F942CDBD" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Speak in",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Speak in\/Speak in.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:AliceFanYang\/test.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "978052649186A4E59AC3E64481FDC004F942CDBD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:AliceFanYang\/VoiceJournal.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F6BCB51616B6A2C5090628B4B2B70EF5A9E71363"
+    }
+  ]
+}
