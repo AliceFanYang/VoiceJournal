@@ -43,7 +43,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How was your day?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e59-8s-hZF">
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -68,6 +68,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.75802801724137936" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="saveText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jZO-NN-wLv"/>
@@ -87,7 +88,7 @@
                             <constraint firstAttribute="trailing" secondItem="uXV-Ob-av8" secondAttribute="trailing" constant="20" id="CSd-YY-tmN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L9V-Tu-5O8" secondAttribute="bottom" id="Fpm-U0-QB3"/>
                             <constraint firstItem="uXV-Ob-av8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="GLP-nB-e28"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="e59-8s-hZF" secondAttribute="trailing" constant="48" id="JkR-5N-IJF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e59-8s-hZF" secondAttribute="trailing" constant="40" id="JkR-5N-IJF"/>
                             <constraint firstItem="uXV-Ob-av8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="LAi-Xl-sn3"/>
                             <constraint firstItem="e59-8s-hZF" firstAttribute="top" secondItem="uXV-Ob-av8" secondAttribute="bottom" constant="38" id="NSx-fC-gre"/>
                             <constraint firstItem="L9V-Tu-5O8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qco-YZ-W8y"/>
@@ -96,7 +97,7 @@
                             <constraint firstItem="snx-9X-8lf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Teg-6L-nqv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="snx-9X-8lf" secondAttribute="bottom" constant="40" id="YVO-WX-n4F"/>
                             <constraint firstItem="WeG-oA-DvC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="b5e-UG-vn4"/>
-                            <constraint firstItem="e59-8s-hZF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="e0y-aE-GSk"/>
+                            <constraint firstItem="e59-8s-hZF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="e0y-aE-GSk"/>
                             <constraint firstItem="snx-9X-8lf" firstAttribute="top" secondItem="WeG-oA-DvC" secondAttribute="bottom" constant="60.5" id="hGd-xF-L8a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WeG-oA-DvC" secondAttribute="trailing" constant="50" id="lLa-RB-mYP"/>
                             <constraint firstItem="uXV-Ob-av8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQa-LU-uzz"/>
